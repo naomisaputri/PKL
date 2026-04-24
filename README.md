@@ -57,3 +57,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Sistem PKL
+
+## Identitas Mahasiswa
+Nama  : Naomi Mela Saputri 
+NIM   : 230101132  
+Prodi : Sistem Informasi
+Kelas : 22D1
+
+## Tema Kasus
+Website pendataan siswa PKL berbasis Laravel.
+
+## Fitur
+- Login
+- Dashboard
+- CRUD Data Siswa
+- Logout
