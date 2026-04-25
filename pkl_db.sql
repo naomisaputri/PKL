@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2026 at 01:31 PM
+-- Generation Time: Apr 25, 2026 at 05:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -144,6 +144,29 @@ CREATE TABLE `penempatan_pkl` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `perusahaan`
+--
+
+CREATE TABLE `perusahaan` (
+  `id` int(11) NOT NULL,
+  `nama_perusahaan` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `no_hp` varchar(20) CHARACTER SET utf16 COLLATE utf16_general_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `perusahaan`
+--
+
+INSERT INTO `perusahaan` (`id`, `nama_perusahaan`, `alamat`, `no_hp`, `created_at`, `updated_at`) VALUES
+(1, 'Telkom Akses Solo', 'Jl. Mayor Kusmanto No.1, Kedung Lumbu, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah', '12345678910', '2026-04-24 19:43:28', '2026-04-24 19:47:58'),
+(2, 'SMKN 3 Surakarta', 'Jl. Brigjen Sudiarto No.34, Danukusuman, Kec. Serengan, Kota Surakarta, Jawa Tengah 57156', '924825875248', '2026-04-24 19:49:03', '2026-04-24 19:49:03');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sessions`
 --
 
@@ -161,11 +184,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4CBYs6qIqz7LlF3HVzWN3r1b1nCFgjmQ72DmVKO5', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUjdWeEFKcmVTT0ZOZXd0N05vSGlGMThiT2laZnlHY3VIVDQwQ003byI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3Npc3dhIjt9czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czo5OiJkYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1776865947),
-('FL1GM52N3GteISM9dGvII0qy78Z2rA5oEv3YXHfM', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiOHlRazFnUm4zWjR1dWU3eVp4TE9Yd0hCTnNCOXNqREhPbW1kTUlSMCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1776863938),
-('KdWMyqovzbxagHKwaJHZ0OdQRyS4oxuHbHgDGuca', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZ0JWenBiMlVWYXhsUGE5aU5keXJLSjNpNkpBeHNFdWx6ZVdGRkNvVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fX0=', 1777018659),
-('RrgYNbIsLUjAdRupoLjI5VEoZfjnY0efNOBBYIVz', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiM1JaQ0xtbllwRnlaYXZIZkFrckNOU0xwWHRpcFZEREt2SUhrTWs0bSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1776863574),
-('x8AVXNer443SzmV6zH0Kh1OeC1PIdoaAJF43CkME', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSmJnNFBkcHFxVDV5WFYxRUltN0Nya0tIVDZRT2RpSGk2Z2R3ZlR6QyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1776863799);
+('dPV3Un1xAtgHLsRmrLANiQ6laQtQs3eKF76yYJh6', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUm0zOXFib3FhRXd6VlBRUHNXZG9XTTQxN3pyWG1US2ZmZktEaVZGaCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wZXJ1c2FoYWFuIjtzOjU6InJvdXRlIjtzOjE2OiJwZXJ1c2FoYWFuLmluZGV4Ijt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1777085875);
 
 -- --------------------------------------------------------
 
@@ -282,6 +301,12 @@ ALTER TABLE `penempatan_pkl`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `perusahaan`
+--
+ALTER TABLE `perusahaan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
@@ -334,6 +359,12 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `penempatan_pkl`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `perusahaan`
+--
+ALTER TABLE `perusahaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `siswa`
