@@ -46,6 +46,7 @@ padding:30px;
 
 <a href="/dashboard">Dashboard</a>
 <a href="/siswa">Siswa</a>
+<a href="/perusahaan">Perusahaan</a>
 
 <form method="POST" action="{{ route('logout') }}">
 @csrf
